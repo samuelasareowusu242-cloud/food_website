@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <!-- Decorative steam waves -->
+  <path d="M190 140 Q210 100 190 70" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <path d="M256 130 Q276 90 256 60" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M322 140 Q342 100 322 70" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <!-- Cloche / Bowl -->
+  <path d="M110 300 C110 200 210 160 256 160 C302 160 402 200 402 300 Z" fill="#ffffff"/>
+  <!-- Cloche handle -->
+  <circle cx="256" cy="145" r="20" fill="#ffffff"/>
+  <!-- Tray platter -->
+  <rect x="80" y="315" width="352" height="26" rx="13" fill="#fed7aa"/>
+  <!-- Accent wave -->
+  <path d="M120 370 Q180 345 256 370 T392 370" stroke="#ffedd5" stroke-width="12" stroke-linecap="round" fill="none"/>
+</svg>

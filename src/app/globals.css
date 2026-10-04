@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --obsidian: #0D0D12;
+    --champagne: #C9A84C;
+    --champagne-light: #E0C878;
+    --ivory: #FAF8F5;
+    --slate: #2A2A35;
+    --slate-border: rgba(201, 168, 76, 0.18);
+  }
+
+  body {
+    background-color: var(--obsidian);
+    color: var(--ivory);
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Typography styles */
+.font-drama {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-style: italic;
+}
+
+.font-data {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.font-heading {
+  font-family: var(--font-inter), sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Magnetic Button Micro-interaction */
+.btn-magnetic {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+.btn-magnetic:active {
+  transform: scale(0.98);
+}
+
+.btn-magnetic .sliding-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.btn-magnetic:hover .sliding-layer {
+  transform: translateY(0%);
+}
+
+.btn-magnetic > span:not(.sliding-layer) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Interactive link lift */
+.interactive-lift {
+  transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.25s ease;
+}
+
+.interactive-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* Glass & Container radius systems */
+.luxe-card {
+  background: rgba(26, 26, 38, 0.7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--slate-border);
+  border-radius: 2.25rem;
+}
+
+.luxe-card-ivory {
+  background: #FAF8F5;
+  color: #0D0D12;
+  border-radius: 2.25rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+/* Global Noise Texture */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.05;
+}
+
+/* Keyframe animations for Protocol micro-instruments */
+@keyframes laserScan {
+  0% { top: 5%; opacity: 0.3; }
+  50% { top: 90%; opacity: 1; }
+  100% { top: 5%; opacity: 0.3; }
+}
+
+@keyframes ekgPulse {
+  0% { stroke-dashoffset: 400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -400; }
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D12;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A35;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A84C;
+}
